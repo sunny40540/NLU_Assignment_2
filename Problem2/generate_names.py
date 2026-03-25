@@ -1,29 +1,6 @@
-"""
-=============================================================================
-CSL 7640: Natural Language Understanding - Assignment 2
-Problem 2, Task 0: Generate 1000 Indian Names Dataset
-=============================================================================
-This script generates a dataset of 1000 Indian names for character-level
-name generation training. The names are curated from common Indian first
-names across multiple regions and languages, covering:
-  - North Indian names (Hindi)
-  - South Indian names (Tamil, Telugu, Kannada, Malayalam)
-  - Bengali names
-  - Marathi/Gujarati names
-  - Punjabi names
-
-Author: Student, IIT Jodhpur
-Date: March 2026
-=============================================================================
-"""
-
+# Generates a dataset of 1000 diverse Indian names for RNN training
 import os
 import random
-
-# =========================================================================
-# Comprehensive list of Indian names (curated, diverse)
-# These represent common names from various Indian regions and communities
-# =========================================================================
 
 INDIAN_NAMES = [
     # --- North Indian / Hindi Names (Male) ---

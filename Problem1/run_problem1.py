@@ -1,18 +1,4 @@
-"""
-=============================================================================
-CSL 7640: Natural Language Understanding - Assignment 2
-Problem 1: Complete Pipeline Runner
-=============================================================================
-This script runs the entire Problem 1 pipeline in sequence:
-  1. Scraping (Task 1a)
-  2. Preprocessing (Task 1b)
-  3. Word2Vec Training (Task 2)
-  4. Semantic Analysis (Task 3)
-  5. Visualization (Task 4)
-
-Usage: python run_problem1.py
-=============================================================================
-"""
+# Runs the entire Problem 1 pipeline: scraping, preprocessing, training, analysis, visualization
 
 import os
 import sys

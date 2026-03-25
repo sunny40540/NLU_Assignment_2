@@ -1,19 +1,4 @@
-"""
-=============================================================================
-CSL 7640: Natural Language Understanding - Assignment 2
-Problem 1, Task 1: Dataset Preparation - Web Scraping Module
-=============================================================================
-This script scrapes textual data from 10 IIT Jodhpur web pages and the
-Academic Regulations PDF to build a corpus for Word2Vec training.
-
-Sources:
-  - 10 IIT Jodhpur website pages (departments, academic programs, research, faculty)
-  - Academic Regulations PDF document (mandatory source)
-
-Author: Student, IIT Jodhpur
-Date: March 2026
-=============================================================================
-"""
+# Web scraping module - scrapes IITJ pages and Academic Regulations PDF
 
 import os
 import re

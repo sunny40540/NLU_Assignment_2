@@ -1,21 +1,3 @@
-"""
-=============================================================================
-CSL 7640: Natural Language Understanding - Assignment 2
-Problem 1, Task 4: Visualization using PCA and t-SNE
-=============================================================================
-This script visualizes word embeddings from trained CBOW and Skip-gram
-Word2Vec models using dimensionality reduction:
-  1. PCA (Principal Component Analysis) - Linear projection to 2D
-  2. t-SNE (t-distributed Stochastic Neighbor Embedding) - Non-linear 2D map
-
-Clusters are visualized for semantically related word groups to compare
-how CBOW and Skip-gram capture different semantic structures.
-
-Author: Student, IIT Jodhpur
-Date: March 2026
-=============================================================================
-"""
-
 import os
 import numpy as np
 import matplotlib
@@ -37,18 +19,7 @@ def load_models():
 
 
 def get_cluster_words():
-    """
-    Define semantically meaningful word clusters for visualization.
     
-    These clusters represent different themes from the IIT Jodhpur corpus:
-      - Academic: related to academic programs and study
-      - Research: related to research activities
-      - Department: department and organizational terms
-      - People: roles of people at the institute
-    
-    Returns:
-        dict: {cluster_name: [words]}
-    """
     clusters = {
         "Academic": [
             "semester", "course", "curriculum", "credits", "grade",
@@ -80,10 +51,6 @@ def visualize_embeddings(model, model_name, method="pca"):
       3. Plot words with color-coding by cluster
       4. Annotate each point with the word label
     
-    Args:
-        model (Word2Vec): Trained Word2Vec model
-        model_name (str): Name of the model (CBOW / Skip-gram)
-        method (str): "pca" or "tsne"
     """
     clusters = get_cluster_words()
 

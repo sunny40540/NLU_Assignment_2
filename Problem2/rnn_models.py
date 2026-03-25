@@ -1,24 +1,4 @@
-"""
-=============================================================================
-CSL 7640: Natural Language Understanding - Assignment 2
-Problem 2, Task 1-3: Character-Level Name Generation using RNN Variants
-=============================================================================
-Implements from scratch and compares three models:
-  1. Vanilla RNN
-  2. Bidirectional LSTM (BLSTM)
-  3. RNN with Basic Attention Mechanism
-
-For each model:
-  - Architecture is described clearly
-  - Number of trainable parameters is reported
-  - Hyperparameters are specified
-  - Quantitative evaluation: Novelty Rate, Diversity
-  - Qualitative analysis: Realism, failure modes, samples
-
-Author: Student, IIT Jodhpur
-Date: March 2026
-=============================================================================
-"""
+# Character-level name generation using Vanilla RNN, BLSTM, and Attention RNN
 
 import os
 import random

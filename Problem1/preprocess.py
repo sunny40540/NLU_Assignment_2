@@ -1,25 +1,3 @@
-"""
-=============================================================================
-CSL 7640: Natural Language Understanding - Assignment 2
-Problem 1, Task 1: Dataset Preparation - Preprocessing Module
-=============================================================================
-This script preprocesses the raw scraped corpus to create a clean dataset
-suitable for Word2Vec training. It also computes dataset statistics and
-generates a Word Cloud visualization.
-
-Preprocessing Pipeline:
-  1. Remove boilerplate text (URLs, email addresses, copyright notices)
-  2. Remove non-English text and formatting artifacts
-  3. Tokenization using NLTK
-  4. Lowercasing all tokens
-  5. Remove excessive punctuation and non-textual content
-  6. Remove stopwords (optional, configurable)
-
-Author: Student, IIT Jodhpur
-Date: March 2026
-=============================================================================
-"""
-
 import os
 import re
 import nltk
@@ -42,23 +20,8 @@ from nltk.corpus import stopwords
 
 
 def remove_boilerplate(text):
-    """
-    Remove boilerplate text and formatting artifacts from raw scraped text.
     
-    This includes:
-      - URLs (http/https links)
-      - Email addresses
-      - Copyright notices
-      - Navigation menu items
-      - Excessive whitespace
-      - Non-ASCII / non-English characters (Hindi, etc.)
-    
-    Args:
-        text (str): Raw text with boilerplate
-    
-    Returns:
-        str: Cleaned text with boilerplate removed
-    """
+  #  Remove boilerplate text and formatting artifacts from raw scraped text.
     # Remove URLs
     text = re.sub(r"https?://\S+", "", text)
     # Remove email patterns like name[at]domain[dot]com
@@ -85,24 +48,9 @@ def remove_boilerplate(text):
 
 
 def tokenize_and_clean(text, remove_stops=False):
-    """
-    Tokenize text and clean tokens for Word2Vec training.
+
+    #Tokenize text and clean tokens for Word2Vec training.
     
-    Processing steps:
-      1. Sentence splitting for document structure
-      2. Word tokenization using NLTK
-      3. Lowercase conversion
-      4. Remove tokens that are purely punctuation or numbers
-      5. Remove very short tokens (length < 2)
-      6. Optionally remove stopwords
-    
-    Args:
-        text (str): Cleaned text to tokenize
-        remove_stops (bool): Whether to remove stopwords (default: False)
-    
-    Returns:
-        list[list[str]]: List of sentences, each a list of tokens
-    """
     stop_words = set(stopwords.words("english")) if remove_stops else set()
 
     sentences = sent_tokenize(text)
@@ -132,12 +80,6 @@ def compute_statistics(tokenized_docs, doc_names):
       - Vocabulary size (unique tokens)
       - Top 20 most frequent words
     
-    Args:
-        tokenized_docs (list): List of tokenized document data
-        doc_names (list): Names/sources of each document
-    
-    Returns:
-        dict: Statistics dictionary with keys 'num_docs', 'num_tokens', 'vocab_size', etc.
     """
     all_tokens = []
     for doc_sentences in tokenized_docs:
@@ -187,8 +129,6 @@ def generate_wordcloud(tokenized_docs):
     Uses the WordCloud library to create a visually appealing word cloud
     from the entire corpus. Saved to outputs/wordcloud.png.
     
-    Args:
-        tokenized_docs (list): List of tokenized documents (list of sentences)
     """
     # Flatten all tokens into a single string for the word cloud
     all_tokens = []
@@ -225,13 +165,6 @@ def preprocess_corpus():
     Main preprocessing pipeline: loads raw corpus, cleans, tokenizes,
     computes stats, and generates word cloud.
     
-    Output files:
-      - data/cleaned_corpus.txt : Cleaned text (one sentence per line)
-      - outputs/dataset_statistics.txt : Dataset statistics report
-      - outputs/wordcloud.png : Word Cloud visualization
-    
-    Returns:
-        list[list[str]]: All tokenized sentences ready for Word2Vec
     """
     # Load raw documents
     raw_dir = os.path.join(BASE_DIR, "data", "raw_documents")

@@ -1,24 +1,4 @@
-"""
-=============================================================================
-CSL 7640: Natural Language Understanding - Assignment 2
-Problem 1, Task 2: Word2Vec Model Training
-=============================================================================
-This script trains two Word2Vec models:
-  1. CBOW (Continuous Bag of Words)
-  2. Skip-gram with Negative Sampling
-
-For each model, experiments are conducted with different:
-  - Embedding dimensions: [50, 100, 200]
-  - Context window sizes: [3, 5, 7]
-  - Number of negative samples: [5, 10, 15]
-
-Results are saved formally in a report table.
-
-Author: Student, IIT Jodhpur
-Date: March 2026
-=============================================================================
-"""
-
+# Word2Vec training - CBOW and Skip-gram with hyperparameter experiments
 import os
 import time
 import numpy as np
