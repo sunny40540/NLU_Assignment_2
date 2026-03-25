@@ -6,110 +6,110 @@ SEMANTIC ANALYSIS REPORT
 --- Top 5 Nearest Neighbors (CBOW) ---
 
   'research':
-    1. development           (sim: 0.8184)
-    2. proposal              (sim: 0.8117)
-    3. education             (sim: 0.8107)
-    4. healthcare            (sim: 0.8101)
-    5. projects              (sim: 0.8087)
+    1. development           (sim: 0.8386)
+    2. projects              (sim: 0.8356)
+    3. education             (sim: 0.8348)
+    4. activities            (sim: 0.8340)
+    5. officer               (sim: 0.8339)
 
   'student':
-    1. registration          (sim: 0.8274)
-    2. course                (sim: 0.8118)
-    3. classes               (sim: 0.8104)
-    4. registration          (sim: 0.8066)
-    5. is                    (sim: 0.7987)
+    1. registration          (sim: 0.8393)
+    2. classes               (sim: 0.8318)
+    3. course                (sim: 0.8317)
+    4. during                (sim: 0.8276)
+    5. registration          (sim: 0.8257)
 
   'phd':
-    1. eligibility           (sim: 0.8440)
-    2. conditions            (sim: 0.8425)
-    3. meeting               (sim: 0.8421)
-    4. successfully          (sim: 0.8417)
-    5. till                  (sim: 0.8413)
+    1. eligibility           (sim: 0.8479)
+    2. conditions            (sim: 0.8474)
+    3. meeting               (sim: 0.8472)
+    4. successfully          (sim: 0.8467)
+    5. opted                 (sim: 0.8462)
 
   'exam':
-    1. seminar               (sim: 0.8457)
-    2. successful            (sim: 0.8455)
-    3. attend                (sim: 0.8455)
-    4. attend                (sim: 0.8455)
-    5. annual                (sim: 0.8453)
+    1. opportunity           (sim: 0.8486)
+    2. special               (sim: 0.8485)
+    3. component             (sim: 0.8485)
+    4. including             (sim: 0.8485)
+    5. annual                (sim: 0.8485)
 
 --- Top 5 Nearest Neighbors (Skip-gram) ---
 
   'research':
-    1. proposal              (sim: 0.6036)
-    2. copies                (sim: 0.5766)
-    3. conversant            (sim: 0.5646)
-    4. projects              (sim: 0.5607)
-    5. composition           (sim: 0.5523)
+    1. proposal              (sim: 0.6343)
+    2. copies                (sim: 0.5884)
+    3. projects              (sim: 0.5877)
+    4. conversant            (sim: 0.5774)
+    5. composition           (sim: 0.5712)
 
   'student':
-    1. candidacy             (sim: 0.5931)
-    2. attendance            (sim: 0.5863)
-    3. deficient             (sim: 0.5851)
-    4. fails                 (sim: 0.5790)
-    5. found                 (sim: 0.5790)
+    1. candidacy             (sim: 0.6212)
+    2. attendance            (sim: 0.6161)
+    3. appear                (sim: 0.6052)
+    4. found                 (sim: 0.6046)
+    5. deficient             (sim: 0.6035)
 
   'phd':
-    1. mtech                 (sim: 0.6558)
-    2. enrolled              (sim: 0.5964)
-    3. par                   (sim: 0.5951)
-    4. ay                    (sim: 0.5886)
-    5. image                 (sim: 0.5786)
+    1. mtech                 (sim: 0.6704)
+    2. enrolled              (sim: 0.6204)
+    3. ay                    (sim: 0.6030)
+    4. par                   (sim: 0.5995)
+    5. candidates            (sim: 0.5910)
 
   'exam':
-    1. scholars              (sim: 0.7161)
-    2. conferences           (sim: 0.7155)
-    3. collaborative         (sim: 0.7122)
-    4. medium                (sim: 0.7088)
-    5. excellence            (sim: 0.7078)
+    1. conferences           (sim: 0.7200)
+    2. collaborative         (sim: 0.7200)
+    3. scholars              (sim: 0.7200)
+    4. medium                (sim: 0.7200)
+    5. sheets                (sim: 0.7200)
 
 
 --- Analogy Experiments (CBOW) ---
 
   UG : undergraduate :: PG : ?:
-    1. right                 (sim: 0.8411)
-    2. admissions            (sim: 0.8399)
-    3. contained             (sim: 0.8393)
-    4. document              (sim: 0.8388)
-    5. postgraduate          (sim: 0.8384)
+    1. right                 (sim: 0.8473)
+    2. document              (sim: 0.8470)
+    3. postgraduate          (sim: 0.8466)
+    4. registrar             (sim: 0.8459)
+    5. functions             (sim: 0.8458)
 
   student : exam :: professor : ?:
-    1. electrical            (sim: 0.8076)
-    2. inspiring             (sim: 0.7925)
-    3. chemical              (sim: 0.7913)
-    4. innovation            (sim: 0.7906)
-    5. university            (sim: 0.7905)
+    1. electrical            (sim: 0.8253)
+    2. mechanical            (sim: 0.8183)
+    3. foster                (sim: 0.8146)
+    4. university            (sim: 0.8136)
+    5. offers                (sim: 0.8126)
 
   department : faculty :: lab : ?:
-    1. on                    (sim: 0.7784)
-    2. leave                 (sim: 0.7718)
-    3. based                 (sim: 0.7675)
-    4. days                  (sim: 0.7672)
-    5. grades                (sim: 0.7667)
+    1. leave                 (sim: 0.8141)
+    2. spent                 (sim: 0.8139)
+    3. based                 (sim: 0.8131)
+    4. following             (sim: 0.8130)
+    5. on                    (sim: 0.8129)
 
 
 --- Analogy Experiments (Skip-gram) ---
 
   UG : undergraduate :: PG : ?:
-    1. admissions            (sim: 0.6421)
-    2. waived                (sim: 0.6100)
-    3. general               (sim: 0.6007)
-    4. notice                (sim: 0.5988)
-    5. procedures            (sim: 0.5898)
+    1. admissions            (sim: 0.6585)
+    2. procedures            (sim: 0.6276)
+    3. waived                (sim: 0.6263)
+    4. general               (sim: 0.6228)
+    5. notice                (sim: 0.6213)
 
   student : exam :: professor : ?:
-    1. preparation           (sim: 0.5826)
-    2. technological         (sim: 0.5768)
-    3. society               (sim: 0.5767)
-    4. associate             (sim: 0.5675)
-    5. development           (sim: 0.5666)
+    1. preparation           (sim: 0.6130)
+    2. development           (sim: 0.6061)
+    3. technological         (sim: 0.6008)
+    4. associate             (sim: 0.5916)
+    5. society               (sim: 0.5916)
 
   department : faculty :: lab : ?:
-    1. lecture               (sim: 0.5736)
-    2. hour                  (sim: 0.5275)
-    3. tutorial              (sim: 0.5245)
-    4. tutorials             (sim: 0.5079)
-    5. practical             (sim: 0.5040)
+    1. lecture               (sim: 0.5806)
+    2. members               (sim: 0.5396)
+    3. tutorial              (sim: 0.5379)
+    4. hour                  (sim: 0.5370)
+    5. practical             (sim: 0.5211)
 
 
 ======================================================================
