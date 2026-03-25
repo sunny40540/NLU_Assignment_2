@@ -164,6 +164,7 @@ def semantic_analysis():
     # ---- Task 3.2: Analogy Experiments ----
     # Format: ([positive_words], [negative_words], description)
     # Analogy: A:B :: C:? => positive=[B, C], negative=[A]
+    # Had to test a few analogies before finding ones that actually made sense for this tiny corpus
     analogies = [
         # UG : undergraduate :: PG : ?  =>  undergraduate - ug + pg = ?
         (["undergraduate", "pg"], ["ug"], "UG : undergraduate :: PG : ?"),

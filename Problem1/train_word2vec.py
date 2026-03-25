@@ -54,9 +54,9 @@ def train_word2vec(sentences, sg, vector_size, window, negative, epochs=20):
         min_count=2,       # Ignore words with frequency < 2
         sg=sg,             # 0=CBOW, 1=Skip-gram
         negative=negative, # Number of negative samples
-        workers=4,         # Parallelism
+        workers=4,         # Parallelism (using 4 cores speeds this up a lot)
         epochs=epochs,
-        seed=42,           # Reproducibility
+        seed=42,           # Reproducibility (so I get the same results each run)
     )
     return model
 

@@ -426,7 +426,7 @@ def train_model(model, dataset, model_name, epochs=100, batch_size=64, lr=0.003)
             # Backward pass
             optimizer.zero_grad()
             loss.backward()
-            # Gradient clipping to prevent exploding gradients
+            # Gradient clipping is super important here to prevent exploding gradients, especially for the vanilla RNN
             torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5.0)
             optimizer.step()
 
@@ -483,8 +483,8 @@ def generate_names(model, dataset, n=100, max_len=20, temperature=0.8):
             for _ in range(max_len):
                 x = torch.tensor([input_seq], dtype=torch.long).to(device)
 
-                # For BLSTM, we need to handle generation differently
-                # since bidirectional models need full sequence
+                # For BLSTM, we need to handle generation differently 
+                # since bidirectional models really want the full sequence but autoregressive generation is one-by-one.
                 logits, _ = model(x)
 
                 # Get logits for the last time step

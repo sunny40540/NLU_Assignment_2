@@ -59,7 +59,7 @@ def scrape_webpage(url):
         response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
 
-        # Parse HTML content
+        # Parse HTML content - beautifulsoup makes this so much easier
         soup = BeautifulSoup(response.text, "html.parser")
 
         # Remove boilerplate elements: scripts, styles, navigation, footers
@@ -95,6 +95,7 @@ def extract_pdf_text(pdf_path):
             page_text = page.extract_text()
             if page_text:
                 text_parts.append(page_text)
+        # pypdf2 is a bit messy with newlines but it works well enough for this dataset
         return " ".join(text_parts)
     except Exception as e:
         print(f"  [WARNING] Failed to read PDF {pdf_path}: {e}")

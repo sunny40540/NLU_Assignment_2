@@ -24,7 +24,7 @@ def remove_boilerplate(text):
   #  Remove boilerplate text and formatting artifacts from raw scraped text.
     # Remove URLs
     text = re.sub(r"https?://\S+", "", text)
-    # Remove email patterns like name[at]domain[dot]com
+    # Remove email patterns like name[at]domain[dot]com (found a lot of these on the faculty page)
     text = re.sub(r"\S+\[at\]\S+\[dot\]\S+", "", text)
     text = re.sub(r"\S+@\S+\.\S+", "", text)
     # Remove copyright lines
@@ -143,7 +143,7 @@ def generate_wordcloud(tokenized_docs):
         height=600,
         background_color="white",
         max_words=150,
-        colormap="viridis",
+        colormap="viridis", # looks better than the default colors
         contour_width=1,
         contour_color="steelblue",
     ).generate(text_for_cloud)

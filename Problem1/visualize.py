@@ -84,9 +84,10 @@ def visualize_embeddings(model, model_name, method="pca"):
     if method == "pca":
         reducer = PCA(n_components=2, random_state=42)
         coords = reducer.fit_transform(vectors_np)
-        explained_var = reducer.explained_variance_ratio_
-        title_extra = f"(Var: {explained_var[0]:.2%}, {explained_var[1]:.2%})"
+        explain_var = reducer.explained_variance_ratio_
+        title_extra = f"(Var: {explain_var[0]:.2%}, {explain_var[1]:.2%})"
     else:  # t-SNE
+        # perplexity needs to be smaller than the number of samples, had to add this check and max it to 30
         perplexity = min(30, len(vectors) - 1)
         reducer = TSNE(n_components=2, random_state=42, perplexity=perplexity)
         coords = reducer.fit_transform(vectors_np)
