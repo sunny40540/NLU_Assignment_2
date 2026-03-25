@@ -1,0 +1,27 @@
+DATASET STATISTICS
+========================================
+Total number of documents : 10
+Total number of tokens    : 17523
+Vocabulary size           : 2263
+
+Top 20 most frequent words:
+  the                  -> 1344
+  of                   -> 878
+  and                  -> 455
+  to                   -> 433
+  for                  -> 406
+  in                   -> 387
+  be                   -> 292
+  student              -> 240
+  or                   -> 184
+  will                 -> 180
+  by                   -> 178
+  course               -> 146
+  as                   -> 143
+  students             -> 138
+  is                   -> 135
+  on                   -> 134
+  with                 -> 126
+  at                   -> 121
+  program              -> 117
+  academic             -> 117

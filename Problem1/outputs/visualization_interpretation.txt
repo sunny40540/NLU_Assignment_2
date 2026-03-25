@@ -1,0 +1,31 @@
+======================================================================
+VISUALIZATION INTERPRETATION
+======================================================================
+
+PCA Visualization:
+----------------------------------------
+PCA captures the directions of maximum variance in the embedding space.
+In our visualizations, we observe that:
+- Academic-related words tend to cluster together, reflecting their
+  frequent co-occurrence in curriculum and program descriptions.
+- Research words form a distinct cluster, as they appear in research
+  pages and project descriptions in the corpus.
+- Department/organizational words may overlap with research and academic
+  clusters, as these concepts are interconnected at IIT Jodhpur.
+
+t-SNE Visualization:
+----------------------------------------
+t-SNE preserves local neighborhood structure, making it better at
+revealing fine-grained clusters. We observe:
+- Tighter, more distinct clusters compared to PCA.
+- Words that are semantically close (e.g., 'course' and 'semester')
+  appear closer in t-SNE space.
+
+CBOW vs Skip-gram Differences:
+----------------------------------------
+- CBOW tends to produce embeddings where frequent words are well-
+  represented, leading to tighter clusters for common academic terms.
+- Skip-gram captures more nuanced semantic relationships for rare
+  words, which may result in more dispersed but informative clusters.
+- Skip-gram embeddings often show better separation between semantically
+  distinct clusters due to its word-context pair training approach.

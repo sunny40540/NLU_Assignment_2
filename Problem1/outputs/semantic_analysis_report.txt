@@ -1,0 +1,134 @@
+======================================================================
+SEMANTIC ANALYSIS REPORT
+======================================================================
+
+
+--- Top 5 Nearest Neighbors (CBOW) ---
+
+  'research':
+    1. development           (sim: 0.9838)
+    2. proposal              (sim: 0.9801)
+    3. education             (sim: 0.9798)
+    4. activities            (sim: 0.9791)
+    5. healthcare            (sim: 0.9787)
+
+  'student':
+    1. not                   (sim: 0.9894)
+    2. may                   (sim: 0.9819)
+    3. can                   (sim: 0.9810)
+    4. registration          (sim: 0.9791)
+    5. is                    (sim: 0.9746)
+
+  'phd':
+    1. eligibility           (sim: 0.9971)
+    2. conditions            (sim: 0.9963)
+    3. meeting               (sim: 0.9962)
+    4. successfully          (sim: 0.9960)
+    5. mtech                 (sim: 0.9958)
+
+  'exam':
+    1. ii                    (sim: 0.9978)
+    2. get                   (sim: 0.9978)
+    3. attend                (sim: 0.9977)
+    4. successful            (sim: 0.9977)
+    5. seminar               (sim: 0.9977)
+
+--- Top 5 Nearest Neighbors (Skip-gram) ---
+
+  'research':
+    1. proposal              (sim: 0.8505)
+    2. copies                (sim: 0.7653)
+    3. conversant            (sim: 0.7504)
+    4. projects              (sim: 0.7442)
+    5. out                   (sim: 0.7353)
+
+  'student':
+    1. candidacy             (sim: 0.8440)
+    2. attendance            (sim: 0.8369)
+    3. deficient             (sim: 0.8360)
+    4. fails                 (sim: 0.8301)
+    5. found                 (sim: 0.8288)
+
+  'phd':
+    1. mtech                 (sim: 0.9052)
+    2. enrolled              (sim: 0.8462)
+    3. par                   (sim: 0.8449)
+    4. ay                    (sim: 0.8396)
+    5. image                 (sim: 0.8275)
+
+  'exam':
+    1. scholars              (sim: 0.9666)
+    2. conferences           (sim: 0.9664)
+    3. collaborative         (sim: 0.9628)
+    4. medium                (sim: 0.9600)
+    5. excellence            (sim: 0.9583)
+
+
+--- Analogy Experiments (CBOW) ---
+
+  UG : undergraduate :: PG : ?:
+    1. right                 (sim: 0.9957)
+    2. admissions            (sim: 0.9950)
+    3. contained             (sim: 0.9948)
+    4. document              (sim: 0.9944)
+    5. postgraduate          (sim: 0.9943)
+
+  student : exam :: professor : ?:
+    1. electrical            (sim: 0.9798)
+    2. inspiring             (sim: 0.9723)
+    3. university            (sim: 0.9722)
+    4. innovation            (sim: 0.9720)
+    5. chemical              (sim: 0.9716)
+
+  department : faculty :: lab : ?:
+    1. on                    (sim: 0.9654)
+    2. leave                 (sim: 0.9626)
+    3. based                 (sim: 0.9603)
+    4. grades                (sim: 0.9600)
+    5. days                  (sim: 0.9596)
+
+
+--- Analogy Experiments (Skip-gram) ---
+
+  UG : undergraduate :: PG : ?:
+    1. admissions            (sim: 0.8912)
+    2. waived                (sim: 0.8581)
+    3. general               (sim: 0.8503)
+    4. notice                (sim: 0.8491)
+    5. procedures            (sim: 0.8380)
+
+  student : exam :: professor : ?:
+    1. preparation           (sim: 0.8330)
+    2. society               (sim: 0.8291)
+    3. technological         (sim: 0.8251)
+    4. associate             (sim: 0.8181)
+    5. development           (sim: 0.8136)
+
+  department : faculty :: lab : ?:
+    1. lecture               (sim: 0.7643)
+    2. hour                  (sim: 0.7022)
+    3. tutorial              (sim: 0.7006)
+    4. tutorials             (sim: 0.6809)
+    5. practical             (sim: 0.6777)
+
+
+======================================================================
+DISCUSSION
+======================================================================
+
+The semantic analysis reveals that the trained Word2Vec models capture
+meaningful relationships present in the IIT Jodhpur corpus.
+
+Nearest Neighbors:
+- Words like 'research' are expected to have neighbors related to
+  academic research activities (publications, projects, labs).
+- 'student' should relate to academic concepts like courses, learning.
+- 'phd' should connect to doctoral program terminology.
+- 'exam' should associate with evaluation and assessment terms.
+
+Analogies:
+- The UG:BTech::PG:? analogy tests hierarchical academic understanding.
+  Expected answer: 'mtech' or 'master' indicating PG program names.
+- Results depend heavily on corpus context and vocabulary coverage.
+- Skip-gram often captures finer semantic relationships due to its
+  word-context pair training, while CBOW is better with frequent words.

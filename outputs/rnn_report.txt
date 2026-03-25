@@ -1,0 +1,150 @@
+======================================================================
+CHARACTER-LEVEL NAME GENERATION - FULL REPORT
+======================================================================
+
+MODEL ARCHITECTURES
+----------------------------------------
+
+  Vanilla RNN:
+    Trainable parameters: 25,244
+    Embedding dim: 32, Hidden size: 128, Layers: 1
+    Learning rate: 0.003, Epochs: 100, Batch: 64
+
+  BLSTM:
+    Trainable parameters: 173,980
+    Embedding dim: 32, Hidden size: 128, Layers: 1
+    Learning rate: 0.003, Epochs: 100, Batch: 64
+
+  Attention RNN:
+    Trainable parameters: 124,188
+    Embedding dim: 32, Hidden size: 128, Layers: 1
+    Learning rate: 0.003, Epochs: 100, Batch: 64
+
+
+QUANTITATIVE COMPARISON
+----------------------------------------
+
+Model                | Novelty Rate |  Diversity |   Params
+------------------------------------------------------------
+Vanilla RNN          |        16.5% |      90.5% |   25,244
+BLSTM                |       100.0% |     100.0% |  173,980
+Attention RNN        |         4.5% |      90.0% |  124,188
+
+
+GENERATED NAME SAMPLES
+----------------------------------------
+
+  Vanilla RNN (first 30 names):
+     1. Sharad
+     2. Rajan
+     3. Alankrit
+     4. Tamal
+     5. Yudhishthiran
+     6. Harshal
+     7. Tapushabh
+     8. Maniesh
+     9. Tripod
+    10. Chandresh
+    11. Ashaika
+    12. Anushka
+    13. Sameeran
+    14. Dhruv
+    15. Shreyas
+    16. Bhavravi
+    17. Sachin
+    18. Abhinavpreet
+    19. Chandanika
+    20. Abhishwari
+    21. Rekha
+    22. Lakshika
+    23. Manusham
+    24. Haimanti
+    25. Malhar
+    26. Saugata
+    27. Radha
+    28. Harish
+    29. Vaibhav
+    30. Fateh
+
+  BLSTM (first 30 names):
+     1. Zoyulobindeep
+     2. Chowelp
+     3. Lokliesanbbii
+     4. Gizpreeniali
+     5. Tojjjyegeett
+     6. Owajyojajjir
+     7. Jaslowek
+     8. Qowwwwiqnubiteme
+     9. Zokavneep
+    10. Qoqgemhiti
+    11. Volpan
+    12. Iqvindepreep
+    13. Lyootrajajeshenjeep
+    14. Chwooprajj
+    15. Themrito
+    16. Yahant
+    17. Vimeep
+    18. Gothamrujeep
+    19. Yubjjo
+    20. Qovvivodeep
+    21. Bhamebjyo
+    22. Qpaj
+    23. Zozojjargin
+    24. Bbbbbiter
+    25. Fohwwteki
+    26. Zojjigavimo
+    27. Mupritarpeer
+    28. Brimodeet
+    29. Fowoowpreet
+    30. Zoprubbhiloji
+
+  Attention RNN (first 30 names):
+     1. Urvashi
+     2. Samridhiya
+     3. Aniruddha
+     4. Govinda
+     5. Rohiniesh
+     6. Anand
+     7. Hamsini
+     8. Shwetaya
+     9. Shikha
+    10. Hitesh
+    11. Aryanan
+    12. Anmol
+    13. Lakshmi
+    14. Divyanshu
+    15. Gunmeet
+    16. Rituparnaesh
+    17. Vallabh
+    18. Janaki
+    19. Maniesh
+    20. Hemali
+    21. Aisha
+    22. Chandra
+    23. Binod
+    24. Vijayandeep
+    25. Mithuni
+    26. Naveen
+    27. Yashi
+    28. Animesh
+    29. Rituparna
+    30. Shweta
+
+
+QUALITATIVE DISCUSSION
+----------------------------------------
+
+Vanilla RNN:
+  - Tends to generate shorter names due to vanishing gradient issues.
+  - May produce repetitive character patterns.
+  - Suitable for simple patterns but struggles with long dependencies.
+
+BLSTM:
+  - Better captures character dependencies from both directions.
+  - Produces more realistic and diverse names.
+  - LSTM gates help maintain information over longer sequences.
+
+Attention RNN:
+  - Attention mechanism allows focusing on relevant parts of input.
+  - May produce the most linguistically coherent names.
+  - More parameters due to attention layers.
